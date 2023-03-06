@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #3e4546;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 90%;
+  line-height: 1.7;
+}
+
+.row {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+section {
+    padding: 20px 0 40px 0;
+}
+
+
+
+/*------- HEADER ------------*/
+
+header {
+  position: relative;
+  background: url(https://github.com/MattSender/Test-Site-Web-FrontEnd/blob/main/images/contactbg.jpg?raw=true);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.text-box {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+h1 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 250%;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/*-----BUTTON ------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-weight: 300;
+  border-radius: 150px;
+  background: #4E603E;
+  color: #fff; 
+  font-size: 90%;
+  margin-right: 20px;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #b9d48d;
+  color: #fff;
+  transition: 0.3s;
+}
+
+
+/*------- NOTRE EQUIPE -----------*/
+
+.team-section{
+    background-color: #ffffff;
+    max-width: 900px;
+    margin: 32px auto;
+  }
+  
+  .team-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: 'Roboto', Segoe-UI, sans-serif;
+    margin:auto 8px;
+  }
+  
+  .team-card {
+    background-color: #ffffff;
+    overflow:hidden;
+    border-radius: 16px;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    grid-template: 
+              "a" auto
+              "b" auto / 100%;
+    box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.1);
+  }
+  
+  .team-card-wide {
+    width: 100%!important;
+    text-align: left;
+    grid-template: 
+              "a" auto
+              "b" auto / 100%;
+  }
+  
+  .team-card-text {
+    padding: 16px;
+  }
+  .team-card-text h2 {
+    align-items: center;
+    margin:0;
+    text-align: center;
+  }
+  .team-card-text h4 {
+    color: #c2dd00;
+    margin: 0;
+    padding:0;
+    font-weight: 400;
+    font-size: 0.9em;
+  }
+  
+  .team-card-image {
+    margin: 0 auto;
+    height:100%;
+    display: flex;
+  }
+  .team-card-image img {
+    height:100%;
+    max-height:360px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  @media screen and (min-width: 1080px) {
+    .team-card {
+      width: calc(33% - calc(16px / 2));
+    }
+  }
+
+  
+
+
+
+/*-------Centrer le bouton--------*/
+
+.clearfix{clear: both;}
+/*-------Centrer le bouton--------*/
+
+/*--------Start of Stylish-------*/
+.stylish{
+    height: 317px;
+    background-image: url(https://github.com/MattSender/Test-Site-Web-FrontEnd/blob/main/images/bgcarinside.jpg?raw=true);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 40px;
+    margin-top: 40px;;
+}
+.stylish::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.6;
+    background: linear-gradient(to right, black, black);
+}
+.stylish > * {z-index: 5; position: relative;}
+.stylish h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: white;
+}
+.stylish hr{
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    margin: 0 auto 30px;
+}
+.stylish p{
+    text-align: center; color: #bbb;
+    margin-bottom: 30px;
+}
+.stylish button{
+    display: block;
+    background-color: #4E603E;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    border: 1px solid #4E603E;
+    border-radius: 100px;
+    margin: 40px auto 0;
+}
+.stylish button:hover{ 
+    cursor: pointer; 
+    background-color:  #b9d48d;
+}
+
+@media (max-width: 400px){ /*  custom extra small  */
+    .stylish{
+        width:100%;
+    }
+}
+
+/*--------End of Stylish-------*/
+
+/*-------Start of Contact us------*/
+.contact-us{
+    height: 500px;
+    padding: 50px;
+}
+.contact-us h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.contact-us hr{
+    width: 50px;
+    height: 3px;
+    background-color: #4E603E;
+    outline: none;
+    border: none;
+    margin: 0 auto 30px;
+}
+.contact-us p{
+    text-align: center; 
+    color: #3e4546;
+}
+.contact-us form input, textarea{
+    display: block;
+    margin: auto;
+    border: none;
+    outline: none;
+    width: 85%;
+    text-align: left;
+    padding: 10px;
+    margin-top: 15px;
+    border-bottom: 1px solid #fff;
+}
+.contact-us form .left{
+    float: left;
+    width: 45%;
+}
+.contact-us form .right{
+    float: right;
+    width: 45%;
+}
+.contact-us form button{
+    display: block;
+    background-color: #4E603E;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    border: 1px solid #4E603E;
+    border-radius: 100px;
+    margin: 40px auto 0;
+}
+.contact-us form button:hover{
+    cursor: pointer;
+    background-color:  #b9d48d;
+}
+.contact-us form textarea{
+    resize: none; 
+    width: 100%;
+    height: 140px;
+}
+@media (max-width: 400px){ /*  custom extra small  */
+    .contact-us{
+        width:100%;
+    }
+}
+/*-------End of Contact us------*/
+

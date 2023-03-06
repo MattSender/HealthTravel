@@ -1,0 +1,405 @@
+  * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  html {
+	font-size: 62.5%;
+  }
+  
+  body {
+	font-family: "Poppins", sans-serif;
+	font-size: 1.6rem;
+	color: #1C1E1F;
+	background-color: #fff;
+  }
+ 
+  
+  .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+  }
+  
+
+
+/*------- HEADER ------------*/
+
+header {
+	position: relative;
+	background: url(https://github.com/MattSender/Test-Site-Web-FrontEnd/blob/main/images/FAQbg.jpg?raw=true);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 100vh;
+	text-align: center;	
+	color: #fff;
+	width: 100%;
+	text-align: center;
+  }
+  
+  .text-box {
+	  position: absolute;
+	  width: 90%;
+	  top: 50%;
+	  left: 50%;
+	  -webkit-transform: translate(-50%, -50%);
+	  transform: translate(-50%, -50%)
+  }
+  
+  h1 {
+	font-family: 'Philosopher', sans-serif;
+	font-size: 250%;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	color: #fff;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 10px;
+  }
+  
+  .text-box p {
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 30px;
+  }
+  
+  /*----- BUTTON ------*/
+  
+  .btn:link,
+  .btn:visited,
+  input[type=submit] {
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px 30px;
+	font-weight: 300;
+	border-radius: 150px;
+	background: #4E603E;
+	color: #fff; 
+	font-size: 90%;
+	margin-right: 20px;
+  }
+  
+  .btn:hover,
+  .btn:active,
+  input[type=submit]:hover,
+  input[type=submit]:active {
+	background-color: #b9d48d;
+	color: #fff;
+	transition: 0.3s;
+  }
+  
+
+  /*----- FAQ ------*/
+
+
+  .btn {
+	text-decoration: none;
+	padding: 1rem 3rem;
+	border-radius: 8px;
+	border: 3px solid var(--primary-color);
+	transition: all 0.3s ease-in-out;
+  }
+  
+  .two-side-section .btn {
+	display: inline-block;
+	margin: 2rem 0;
+  }
+  
+  .btn-primary {
+	color: white;
+	background-color: var(--primary-color);
+  }
+  
+  .btn-primary:hover {
+	background-color: var(--secondary-color);
+	border-color: var(--secondary-color);
+  }
+  
+  .btn-secondary {
+	color: var(--primary-color);
+  }
+  
+  .btn-secondary:hover {
+	background: var(--primary-color);
+	color: white;
+  }
+  
+  .menu-toggle {
+	display: none;
+  }
+  
+  section {
+	padding: 10rem 0;
+  }
+  
+  
+  section .sub {
+	font-weight: 700;
+	color: var(--primary-color);
+  }
+  
+  .move-top {
+	animation: moveTop 0.8s;
+  }
+  
+  .move-right {
+	animation: moveToRight 0.8s;
+  }
+  
+  section p {
+	line-height: 2;
+  }
+  
+  .btn-groups {
+	display: flex;
+	gap: 4rem;
+	margin: 3rem 0;
+  }
+  
+  .two-side-section {
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  .section-img {
+	width: 50%;
+	object-fit: contain;
+  }
+  
+  .service-section {
+	background-color: #eee;
+  }
+  
+  section .info-with-icon {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 3rem;
+	margin-bottom: 50px;
+  }
+  
+  .info-with-icon .info-box {
+	width: 40%;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+	border-radius: 20px;
+	backdrop-filter: blur(5px);
+	transition: all 0.3s;
+	cursor: pointer;
+  }
+  
+  .info-with-icon .info-box:hover {
+	transform: translateY(-20px);
+	background-color: #fff;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-box i {
+	font-size: 4rem;
+	padding: 10px;
+	color: var(--primary-color);
+	margin-bottom: 1px;
+  }
+  
+  .info-box .title {
+	font-size: 2rem;
+	font-weight: 600;
+  }
+  
+  section .section-title {
+	font-size: 5rem;
+	font-weight: 700;
+	margin: 20px 0;
+  }
+  
+  .content-centered {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+  }
+  
+  .text-center {
+	text-align: center;
+  }
+  
+  .testimonial-section {
+	background-color: #eee;
+  }
+  
+  .testimonial {
+	max-width: 800px;
+	display: flex;
+	gap: 20px;
+	background: white;
+	padding: 2rem;
+	border-radius: 20px;
+	transition: all 0.3s;
+	cursor: pointer;
+	margin-bottom: 30px;
+	border: 1px solid #ccc;
+  }
+  
+  .testimonial img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 100%;
+	flex-grow: 0;
+	flex-shrink: 0;
+  }
+  
+  .testimonial blockquote strong {
+	margin-top: 10px;
+	display: inline-block;
+  }
+  
+  .testimonial:hover {
+	transform: translateY(-15px);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scrollToTop {
+	bottom: 20px;
+	right: 20px;
+	z-index: 12;
+	background: var(--primary-color);
+	padding: 1.5rem;
+	border-radius: 20px;
+	position: fixed;
+	cursor: pointer;
+	transition: all 0.3s;
+  }
+  
+  .scrollToTop.hide {
+	transition: transform 0.8s, opacity 0.8s;
+	transform: translateY(20px);
+	opacity: 0;
+  }
+  
+  .scrollLink {
+	color: white;
+  }
+  
+  .scrollToTop:hover {
+	background: black;
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .mb-4 {
+	margin-bottom: 40px !important;
+  }
+  
+  .faq-card {
+	background: #eee;
+	width: 800px;
+	position: relative;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+  }
+  
+  .faq-card .content {
+	margin: 20px;
+  }
+  
+  .faq-toggle {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+  }
+  
+  .faq-question {
+	font-weight: 600;
+  }
+  
+  .faq-answer {
+	margin-top: 20px;
+	display: none;
+  }
+  
+  :checked ~ .content > .faq-answer {
+	display: block;
+  }
+  
+  @keyframes moveTop {
+	0% {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translate(0);
+	}
+  }
+  
+  @keyframes moveToRight {
+	0% {
+	  opacity: 0;
+	  transform: translateX(-50px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translate(0);
+	}
+  }
+  
+  @media (max-width: 900px) {
+	.menu-toggle {
+	  display: block;
+	}
+  
+	.top {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  width: 100%;
+	}
+  
+	.menu-toggle {
+	  width: 40px;
+	  height: 40px;
+	  text-align: center;
+	  font-size: 30px;
+	  cursor: pointer;
+	}
+  
+	section {
+	  padding: 5rem 1rem;
+	}
+  .btn-groups .btn {
+	  width: 100%;
+	}
+  
+	.two-side-section {
+	  flex-direction: column;
+	  text-align: center;
+	  flex-wrap: wrap;
+	}
+  
+	.section-img {
+	  width: 100%;
+	}
+  
+	.testimonial {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.faq-card {
+	  width: 100%;
+	}
+  }
+  
+  @media screen and (max-width: 600px) {
+	.info-with-icon .info-box {
+	  width: 100%;
+	}
+  }
+  
