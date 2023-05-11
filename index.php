@@ -33,7 +33,6 @@
       <li class="nav-item"><a href="about.php">A Propos</a></li>
       <li class="nav-item"><a href="faq.php">FAQ</a></li>
       <li class="nav-item"><a href="contact.php">Contact</a></li> 
-      <li class="nav-item"><a href="login.php">Login</a></li> 
 </form>
     </ul>
   </nav>
@@ -44,8 +43,7 @@
     <img src="images/logo.png" width="600" height="200">
     <h1>Changez votre facon de Voyager !</h1>
     <p>Découvrez HealthTravel et son produit phare : la BoiteX</p>
-    <a class="btn" href="produit.php">Notre Produit</a>
-    <a class="btn" href="contact.php">Nous Contacter</a>
+    <a class="btn" href="login.php">Se Connecter</a>
   </div>
   <!-- Fin Background + Texte -->
 </header>
@@ -69,9 +67,8 @@
           <br>
           <h2>Evolutivité</h2>
           <br>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <p>Flexible et évolutive grâce à des mises à jour régulières du firmware.</p>
         </td>
-
         <!-- 2eme Atout que nous avons ... -->
         <td>
           <img src="images/securite.png">
@@ -79,9 +76,8 @@
           <br>
           <h2>Sécurité</h2>
           <br>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>        
+          <p>Produit avec fonctions de sécurité avancées et respect des normes de confidentialité et de protection des données. </p>        
         </td>
-
         <!-- 3eme Atout que nous avons ... -->
         <td>
           <img src="images/efficacite.png">
@@ -89,7 +85,7 @@
           <br>
           <h2>Efficacité</h2>
           <br>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+          <p>Simple à utiliser, précise et fournit des mesures environnementales en temps réel. </p>
         </td>
     </table>
     <a class="btn-2" href="about.php">Qui sommes nous ?</a>
@@ -152,7 +148,7 @@
           <!--   Reseaux sociaux -->
           <div class="social-media">
             <a href="#"><i class="fi fi-brands-facebook"></i></a>
-            <a href="#"><i class="fi fi-brands-instagram"></i></a>
+            <a href="https://www.instagram.com/healthtravelparis/"><i class="fi fi-brands-instagram"></i></a>
             <a href="#"><i class="fi fi-brands-linkedin"></i></a>
           </div> 
       </div>

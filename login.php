@@ -18,20 +18,20 @@ try {
 if (isset($_POST['register'])) {
     $nom = htmlspecialchars($_POST['nom']);
     $prenom = htmlspecialchars($_POST['prenom']);
-    $email = htmlspecialchars($_POST['email']);
+    $mail = htmlspecialchars($_POST['mail']);
     $password = htmlspecialchars($_POST['password']);
 
-    // Vérification de l'adresse email
-    $check_email = $pdo->prepare("SELECT email FROM login WHERE email = ?");
-    $check_email->execute([$email]);
+    // Vérification de l'adresse mail
+    $check_mail = $pdo->prepare("SELECT mail FROM login WHERE mail = ?");
+    $check_mail->execute([$mail]);
 
-    if ($check_email->rowCount() > 0) {
-        $error_message = "Cet email est déjà utilisé.";
+    if ($check_mail->rowCount() > 0) {
+        $error_message = "Cet mail est déjà utilisé.";
     } else {
         // Inscription de l'utilisateur
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $query = $pdo->prepare("INSERT INTO login (nom, prenom, email, password) VALUES (?, ?, ?, ?)");
-        $query->execute([$nom, $prenom, $email, $hashed_password]);
+        $query = $pdo->prepare("INSERT INTO login (nom, prenom, mail, password) VALUES (?, ?, ?, ?)");
+        $query->execute([$nom, $prenom, $mail, $hashed_password]);
 
         $success_message = "Inscription réussie !";
     }
@@ -39,19 +39,27 @@ if (isset($_POST['register'])) {
 
 // Connectez un utilisateur
 if (isset($_POST['login'])) {
-    $email = htmlspecialchars($_POST['email']);
+    $mail = htmlspecialchars($_POST['mail']);
     $password = htmlspecialchars($_POST['password']);
 
-    $query = $pdo->prepare("SELECT * FROM login WHERE email = ?");
-    $query->execute([$email]);
+    $query = $pdo->prepare("SELECT * FROM login WHERE mail = ?");
+    $query->execute([$mail]);
     $user = $query->fetch();
 
     if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['email'] = $user['email'];
-        header("Location: index.php"); // Redirige vers la page du tableau de bord
+        $_SESSION['id'] = $user['id'];
+        $_SESSION['mail'] = $user['mail'];
+
+        // Vérifiez le rôle de l'utilisateur
+        if ($user['role'] == 'admin') {
+            header("Location: dashboard/dashboard_admin/dashboard_admin.php");
+        } elseif ($user['role'] == 'gestionnaire') {
+            header("Location: dashboard/dashboard_gestionnaire/ashboard_gestionnaire.php");
+        } else {
+            header("Location: dashboard/dashboard_user/dashboard_user.php");
+        }
     } else {
-        $error_message = "Email ou mot de passe incorrect.";
+        $error_message = "E-mail ou mot de passe incorrect.";
     }
 }
 
@@ -93,10 +101,10 @@ if (isset($_POST['login'])) {
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
-            <span>ou utiliser votre email pour vous inscrire</span>
+            <span>ou utiliser votre mail pour vous inscrire</span>
             <input type="text" placeholder="Nom" name="nom" />
             <input type="text" placeholder="Prénom" name="prenom" />
-            <input type="email" placeholder="Email" name="email" />
+            <input type="mail" placeholder="mail" name="mail" />
             <input type="password" placeholder="Password" name="password" />
             <button type="submit" name="register">S'inscrire</button>
 		</form>
@@ -110,7 +118,7 @@ if (isset($_POST['login'])) {
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
             <span>ou connectez-vous avec votre compte</span>
-            <input type="email" placeholder="Email" name="email" />
+            <input type="mail" placeholder="mail" name="mail" />
             <input type="password" placeholder="Password" name="password" />
             <a href="mdpoublie.html">Mot de passe oublié ?</a>
             <button type="submit" name="login">Se connecter</button>

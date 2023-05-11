@@ -29,11 +29,11 @@
   <!-- Navbar -->
   <nav class="navbar-container">
     <ul class="nav navbar">
-      <li class="nav-item"><a href="index.html">Accueil</a></li>
-      <li class="nav-item"><a href="produit.html">BoiteX</a></li>
-      <li class="nav-item active"><a href="apropos.html">A Propos</a></li>
-      <li class="nav-item"><a href="faq.html">FAQ</a></li>
-      <li class="nav-item"><a href="contact.html">Contact</a></li>
+      <li class="nav-item"><a href="index.php">Accueil</a></li>
+      <li class="nav-item"><a href="produit.php">BoiteX</a></li>
+      <li class="nav-item active"><a href="apropos.php">A Propos</a></li>
+      <li class="nav-item"><a href="faq.php">FAQ</a></li>
+      <li class="nav-item"><a href="contact.php">Contact</a></li>
     </ul>
   </nav>
   <!-- Fin Navbar -->
@@ -43,8 +43,8 @@
     <img src="images/logo.png" width="600" height="200">
     <h1>Changez votre facon de Voyager !</h1>
     <p>Découvrez HealthTravel et son produit phare : la BoiteX</p>
-    <a class="btn" href="#">Truc</a>
-    <a class="btn" href="#">Truc 2</a>
+    <a class="btn" href="produit.">Notre Produit</a>
+    <a class="btn" href="contact.php">Nous Contacter</a>
   </div>
   <!-- Fin Background + Texte -->
 </header>
@@ -91,7 +91,7 @@
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
         </td>
     </table>
-    <a class="btn-2" href="apropos.html">Qui sommes nous ?</a>
+    <a class="btn-2" href="apropos.php">Qui sommes nous ?</a>
   </div>
   <br>
   <br>
@@ -127,12 +127,12 @@
         <h3>Nos Membres</h3>
         <div class="border1"></div>
           <ul>
-            <a href="apropos.html"><li>Matthieu</li></a>
-            <a href="apropos.html"><li>Charles</li></a>
-            <a href="apropos.html"><li>Ali (Guillaume)</li></a>
-            <a href="apropos.html"><li>Nathan</li></a>
-            <a href="apropos.html"><li>Louise-Anne</li></a>
-            <a href="apropos.html"><li>Vianney</li></a>
+            <a href="apropos.php"><li>Matthieu</li></a>
+            <a href="apropos.php"><li>Charles</li></a>
+            <a href="apropos.php"><li>Ali (Guillaume)</li></a>
+            <a href="apropos.php"><li>Nathan</li></a>
+            <a href="apropos.php"><li>Louise-Anne</li></a>
+            <a href="apropos.php"><li>Vianney</li></a>
           </ul>
       </div>
 
@@ -149,7 +149,7 @@
           <!--   Reseaux sociaux -->
           <div class="social-media">
             <a href="#"><i class="fi fi-brands-facebook"></i></a>
-            <a href="#"><i class="fi fi-brands-instagram"></i></a>
+            <a href="https://www.instagram.com/healthtravelparis/"><i class="fi fi-brands-instagram"></i></a>
             <a href="#"><i class="fi fi-brands-linkedin"></i></a>
           </div> 
       </div>

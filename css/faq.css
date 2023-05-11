@@ -67,30 +67,30 @@ header {
 	margin-bottom: 30px;
   }
   
-  /*----- BUTTON ------*/
-  
-  .btn:link,
-  .btn:visited,
-  input[type=submit] {
-	display: inline-block;
-	text-decoration: none;
-	padding: 10px 30px;
-	font-weight: 300;
-	border-radius: 150px;
-	background: #4E603E;
-	color: #fff; 
-	font-size: 90%;
-	margin-right: 20px;
-  }
-  
-  .btn:hover,
-  .btn:active,
-  input[type=submit]:hover,
-  input[type=submit]:active {
-	background-color: #b9d48d;
-	color: #fff;
-	transition: 0.3s;
-  }
+/*-----BUTTON ------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-weight: 300;
+  border-radius: 150px;
+  background: #4E603E;
+  color: #fff; 
+  font-size: 90%;
+  margin-right: 20px;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #b9d48d;
+  color: #fff;
+  transition: 0.3s;
+}
   
 
   /*----- FAQ ------*/

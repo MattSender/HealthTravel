@@ -28,11 +28,11 @@
   <!-- Navbar -->
   <nav class="navbar-container">
     <ul class="nav navbar">
-      <li class="nav-item"><a href="index.html">Accueil</a></li>
-      <li class="nav-item"><a href="produit.html">BoiteX</a></li>
-      <li class="nav-item"><a href="about.html">A Propos</a></li>
-      <li class="nav-item"><a href="faq.html">FAQ</a></li>
-      <li class="nav-item"><a href="contact.html">Contact</a></li>
+      <li class="nav-item"><a href="index.php">Accueil</a></li>
+      <li class="nav-item"><a href="produit.php">BoiteX</a></li>
+      <li class="nav-item"><a href="about.php">A Propos</a></li>
+      <li class="nav-item"><a href="faq.php">FAQ</a></li>
+      <li class="nav-item"><a href="contact.php">Contact</a></li>
     </ul>
   </nav>
   <!-- Fin Navbar -->
@@ -42,8 +42,8 @@
     <img src="images/logo.png" width="600" height="200">
     <h1>Changez votre facon de Voyager !</h1>
     <p>Découvrez HealthTravel et son produit phare : la BoiteX</p>
-    <a class="btn" href="produit.html">Notre Produit</a>
-    <a class="btn" href="contact.html">Nous Contacter</a>
+    <a class="btn" href="produit.php">Notre Produit</a>
+    <a class="btn" href="contact.php">Nous Contacter</a>
   </div>
   <!-- Fin Background + Texte -->
 </header>
@@ -87,7 +87,7 @@
             <a href="#"><li>FAQ</li></a>
             <a href="#"><li>Contact</li></a>
             <br>
-            <a href="cgu.html"><li>CGU - Mentions Légales</li></a>
+            <a href="cgu.php"><li>CGU - Mentions Légales</li></a>
           </ul>
       </div>
 
@@ -96,12 +96,12 @@
         <h3>Nos Membres</h3>
         <div class="border1"></div>
           <ul>
-            <a href="contact.html"><li>Matthieu</li></a>
-            <a href="contact.html"><li>Charles</li></a>
-            <a href="contact.html"><li>Ali (Guillaume)</li></a>
-            <a href="contact.html"><li>Nathan</li></a>
-            <a href="contact.html"><li>Louise-Anne</li></a>
-            <a href="contact.html"><li>Vianney</li></a>
+            <a href="contact.php"><li>Matthieu</li></a>
+            <a href="contact.php"><li>Charles</li></a>
+            <a href="contact.php"><li>Ali (Guillaume)</li></a>
+            <a href="contact.php"><li>Nathan</li></a>
+            <a href="contact.php"><li>Louise-Anne</li></a>
+            <a href="contact.php"><li>Vianney</li></a>
           </ul>
       </div>
 
@@ -118,7 +118,7 @@
           <!--   Reseaux sociaux -->
           <div class="social-media">
             <a href="#"><i class="fi fi-brands-facebook"></i></a>
-            <a href="#"><i class="fi fi-brands-instagram"></i></a>
+            <a href="https://www.instagram.com/healthtravelparis/"><i class="fi fi-brands-instagram"></i></a>
             <a href="#"><i class="fi fi-brands-linkedin"></i></a>
           </div> 
       </div>
