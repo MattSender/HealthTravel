@@ -3,7 +3,7 @@ session_start();
 
 // Configuration de la base de données
 $host = 'localhost';
-$dbname = 'test';
+$dbname = 'healthtravel';
 $username = 'root';
 $password = '';
 
@@ -22,7 +22,7 @@ if (isset($_POST['register'])) {
     $password = htmlspecialchars($_POST['password']);
 
     // Vérification de l'adresse mail
-    $check_mail = $pdo->prepare("SELECT mail FROM login WHERE mail = ?");
+    $check_mail = $pdo->prepare("SELECT mail FROM utilisateur WHERE mail = ?");
     $check_mail->execute([$mail]);
 
     if ($check_mail->rowCount() > 0) {
@@ -30,7 +30,7 @@ if (isset($_POST['register'])) {
     } else {
         // Inscription de l'utilisateur
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $query = $pdo->prepare("INSERT INTO login (nom, prenom, mail, password) VALUES (?, ?, ?, ?)");
+        $query = $pdo->prepare("INSERT INTO utilisateur (nom, prenom, mail, password) VALUES (?, ?, ?, ?)");
         $query->execute([$nom, $prenom, $mail, $hashed_password]);
 
         $success_message = "Inscription réussie !";
@@ -42,21 +42,22 @@ if (isset($_POST['login'])) {
     $mail = htmlspecialchars($_POST['mail']);
     $password = htmlspecialchars($_POST['password']);
 
-    $query = $pdo->prepare("SELECT * FROM login WHERE mail = ?");
+    $query = $pdo->prepare("SELECT * FROM utilisateur WHERE mail = ?");
     $query->execute([$mail]);
     $user = $query->fetch();
 
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['id'] = $user['id'];
         $_SESSION['mail'] = $user['mail'];
+        $_SESSION['role'] = $user['role'];
 
         // Vérifiez le rôle de l'utilisateur
         if ($user['role'] == 'admin') {
-            header("Location: dashboard/dashboard_admin/dashboard_admin.php");
+            header("Location: ../HealthTravel/dashboard/admin/dashboard_admin.php");
         } elseif ($user['role'] == 'gestionnaire') {
-            header("Location: dashboard/dashboard_gestionnaire/ashboard_gestionnaire.php");
+            header("Location: ../HealthTravel/dashboard/gestionnaire/dashboard_gestionnaire.php");
         } else {
-            header("Location: dashboard/dashboard_user/dashboard_user.php");
+            header("Location: ../HealthTravel/dashboard/user/dashboard_user.php");
         }
     } else {
         $error_message = "E-mail ou mot de passe incorrect.";

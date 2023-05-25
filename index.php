@@ -24,18 +24,17 @@
 <body>
 
 <!-- Haut de page (Image + Nav Bar) -->
-<header id="home">
+<header>
   <!-- Navbar -->
-  <nav class="navbar-container">
-    <ul class="nav navbar">
-      <li class="nav-item active"><a href="index.php">Accueil</a></li>
-      <li class="nav-item"><a href="produit.php">BoiteX</a></li>
-      <li class="nav-item"><a href="about.php">A Propos</a></li>
-      <li class="nav-item"><a href="faq.php">FAQ</a></li>
-      <li class="nav-item"><a href="contact.php">Contact</a></li> 
-</form>
-    </ul>
   </nav>
+  <a href="login.php" class="btn"><span>Se connecter</span></a>
+    <nav class="navbar" style="">
+        <a href="index.php">Accueil</a>
+        <a href="produit.php">BoiteX</a>
+        <a href="about.php">A Propos</a>
+        <a href="faq.php">FAQ</a>
+        <a href="contact.php">Contacter</a>
+    </nav>
   <!-- Fin Navbar -->
   
   <!-- Background + Texte -->
