@@ -1,0 +1,75 @@
+.main2 {
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 100px;
+  }
+
+  
+  .main2 .form-profil {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .champ{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+  }
+
+  .champ-textarea {
+	grid-row-end: span 2;
+  }
+  
+  .champ label {
+	padding-bottom: 5px;
+	font: 400 16px roboto;
+  }
+  
+  .champ input,
+  .champ textarea {
+	padding: 15px;
+	border-radius: 6px;
+	border: 1px solid #D2D6DB;
+	font: 400 16px roboto;
+	border: 1px solid #D2D6DB;
+  }
+  
+  .champ input:focus,
+  .champ textarea:focus {
+	border: 1px solid #4E603E;
+  }
+
+  
+  .btn-save {
+	grid-column-start: 3;
+	width: 250px;
+	justify-self: end;
+	margin-right: 20px;
+	margin-top: 40px;
+	font: 500 16px roboto;
+	background-color: #4E603E;
+	color: white;
+	border-radius: 50px;
+	padding: 15px;
+  }
+  
+  @media(max-width: 900px) {
+	.main .form-profil {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+	.btn-save {
+	  grid-column-start: 2;
+	}
+  }
+  
+  @media(max-width: 600px) {
+	.main .form-profil {
+	  grid-template-columns: 1fr;
+	}
+	.btn-save {
+	  grid-column-start: 1;
+	}
+  }

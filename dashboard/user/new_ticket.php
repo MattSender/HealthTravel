@@ -3,15 +3,14 @@ session_start();
 
 // Vérification si l'utilisateur est connecté, sinon redirection vers la page de connexion
 if (!isset($_SESSION['user_id'])) {
-  header('Location: login.php');
   exit();
 }
 
 // Connexion à la base de données
 $host = 'localhost';
-$dbname = 'nom_de_votre_base_de_donnees';
-$username = 'votre_nom_d_utilisateur';
-$password = 'votre_mot_de_passe';
+$dbname = 'test';
+$username = 'root';
+$password = '';
 $db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
 // Récupération de l'id de l'utilisateur depuis la session

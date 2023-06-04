@@ -47,7 +47,11 @@ if (isset($_POST['login'])) {
     $user = $query->fetch();
 
     if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['id'] = $user['id'];
+        // Récupérer l'ID utilisateur correspondant à l'adresse e-mail
+        $id_utilisateur = $user['id_utilisateur'];
+    
+        // Définir les variables de session
+        $_SESSION['id_utilisateur'] = $id_utilisateur;
         $_SESSION['mail'] = $user['mail'];
         $_SESSION['role'] = $user['role'];
 
@@ -57,7 +61,7 @@ if (isset($_POST['login'])) {
         } elseif ($user['role'] == 'gestionnaire') {
             header("Location: ../HealthTravel/dashboard/gestionnaire/dashboard_gestionnaire.php");
         } else {
-            header("Location: ../HealthTravel/dashboard/user/dashboard_user.php");
+            header("Location: ../HealthTravel/dashboard/user/user_profil.php");
         }
     } else {
         $error_message = "E-mail ou mot de passe incorrect.";
